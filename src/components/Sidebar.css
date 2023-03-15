@@ -1,0 +1,94 @@
+.sidebar {
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.sidebar .logo {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-left: 2.4rem;
+}
+
+.sidebar .main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.6rem;
+}
+
+.sidebar .main-navigation a{
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.2rem 2.4rem;
+  background-color: transparent;
+  border-radius: 999rem;
+  transition: .4s;
+  width: 100%;
+
+}
+
+.sidebar .main-navigation a:hover{
+  background-color: #1a1a21;
+}
+
+.sidebar .main-navigation a.active{
+  color: var(--twitter-blue);
+}
+
+.sidebar .main-navigation a:not(.active) svg {
+  color: #595959;
+}
+
+.sidebar .main-navigation a svg{
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.btn-primary {
+  background: var(--twitter-blue);
+  border-radius: 99.9rem;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  transition: .2s ease-in-out;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.90);
+}
+
+.btn-primary svg{
+  width: 2.4rem;
+  height: 2.4rem;
+  opacity: 0;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    padding: 2.4rem 1.2rem;
+    align-items: center;
+  }
+  .main-navigation a span {
+    display: none;
+  }
+  .sidebar .btn-primary span {
+    display: none;
+  }
+  .sidebar .btn-primary svg {
+    opacity: 1;
+  }
+}
